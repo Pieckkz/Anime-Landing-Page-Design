@@ -1,0 +1,16 @@
+.overview__heading {
+  font-size: 2.4rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  padding: 1.6rem 3.2rem;
+  @include respond(tab-port-small) {
+    font-size: 2.2rem;
+  }
+}
+.description {
+  font-size: 1.4rem;
+}
+.user-reviews {
+  font-size: 1.4rem;
+}

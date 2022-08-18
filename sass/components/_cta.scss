@@ -1,0 +1,24 @@
+.cta {
+  padding: 3.6rem 0;
+  text-align: center;
+  @include respond(tab-port) {
+    padding: 2.4rem 0;
+  }
+
+  &__watch-now {
+    font-size: 2rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    margin-bottom: 2.6rem;
+    @include respond(tab-port) {
+      margin-bottom: 1.6rem;
+    }
+
+    @include respond(tab-port-small) {
+      font-size: 1.6rem;
+    }
+    @include respond(phone-small) {
+      font-size: 1.4rem;
+    }
+  }
+}

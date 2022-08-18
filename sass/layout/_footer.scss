@@ -1,0 +1,9 @@
+.legal {
+  font-size: 1.2rem;
+  padding: 1.2rem;
+  color: var(--color-grey-light-4);
+  text-align: center;
+  @include respond(tab-port) {
+    display: none;
+  }
+}

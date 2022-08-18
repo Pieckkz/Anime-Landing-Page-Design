@@ -1,0 +1,92 @@
+.sidebar {
+  flex: 0 0 20%;
+  background-color: var(--color-grey-dark-1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.side-nav {
+  font-size: 1.4rem;
+  list-style: none;
+  margin-top: 3.6rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  @include respond(tab-port) {
+    flex-direction: row;
+    margin: 0;
+    gap: 0;
+  }
+
+  &__item {
+    position: relative;
+    @include respond(tab-port) {
+      flex: 1;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 0.3rem;
+      background-color: var(--color-purple);
+      transition: transform 0.3s, width 0.4s cubic-bezier(1, 0, 0, 1) 0.3s,
+        background-color 0.1s;
+      transform: scaleY(0);
+    }
+
+    &:hover::before {
+      transform-origin: bottom;
+      transform: scaleY(1);
+      width: 100%;
+    }
+
+    &:active::before {
+      background-color: var(--color-purple-1);
+    }
+  }
+  &__link {
+    &,
+    &:link,
+    &:visited {
+      color: var(--color-grey-light-1);
+      display: inline-block;
+      text-decoration: none;
+      text-transform: uppercase;
+      font-weight: 100;
+      padding: 1.2rem 2.4rem;
+      display: flex;
+      align-items: center;
+
+      position: relative;
+      z-index: 111;
+      @include respond(tab-port) {
+        justify-content: center;
+        align-items: center;
+        padding: 2rem;
+      }
+      @include respond(tab-port-small) {
+        flex-direction: column;
+        gap: 0.3rem;
+        padding: 1.4rem;
+      }
+    }
+  }
+
+  &__icon {
+    width: 2em;
+    height: 2rem;
+    fill: currentColor;
+    margin-right: 1.2rem;
+    display: flex;
+    align-items: center;
+    @include respond(tab-port-small) {
+      margin-right: 0;
+      width: 1.6rem;
+      height: 1.6rem;
+    }
+  }
+}

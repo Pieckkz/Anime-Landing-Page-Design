@@ -1,0 +1,10 @@
+.content {
+  display: flex;
+  @include respond(tab-port) {
+    flex-direction: column;
+  }
+}
+.anime-view {
+  background-color: var(--color-white);
+  flex: 1;
+}
